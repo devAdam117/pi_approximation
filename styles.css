@@ -1,0 +1,342 @@
+body {   
+    
+   overflow-x: hidden;    
+   width: 100%;  
+   height: 100%;
+}
+.container-fluid{
+    margin: 0 !important;    
+    position: absolute;
+    padding: 0 !important;    
+    width: 100%;  
+    height: 100%;
+}
+.result_cont{
+    font-weight: 500;    
+    max-width: 100% !important;
+    display: flex;
+    flex-direction: column;    
+    justify-content: center;
+}
+
+.square_sect{
+    height: 100%;   
+    position: relative;
+}
+  
+.square{     
+       position: absolute;         
+       display: block;   
+       left: 0;
+       right: 0;     
+       border: 3px solid black;
+}
+
+.info_sect{
+    font-weight: 500;    
+    max-width: 100% !important;
+    display: flex;
+    flex-direction: column;    
+    justify-content: center;    
+}
+
+.body_cont {    
+    background-color: DodgerBlue;
+    color: white;     
+}
+
+.square_sect {
+    background-color:transparent ;
+}
+
+.in_points{
+    display: inline-block;
+    height: 50px;
+    position: relative;
+    width: 50px;
+    background-color: rgb(20, 202, 35);
+    border-radius: 50%;
+    margin-right: auto;
+    border: 3px solid black;  
+}
+
+.out_points{
+    display: inline-block;
+    position: relative;
+    height: 50px;
+    width: 50px;
+    background-color: rgba(247, 10, 10, 0.925);
+    border-radius: 50%;
+    border: 3px solid black;  
+}
+
+.out_container{   
+    text-align: left;
+}
+
+.points_container{
+    display: inline-block;
+    
+}
+
+.points{
+    display: flex;
+    width: 100%;
+}
+
+.points_container_item{
+    display: block;   
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.in_points_info{
+    margin-right: auto;
+}
+
+.points_container:first-of-type{
+    margin-right: auto;
+}
+
+.points:last-of-type{
+    margin-left: auto;
+}
+
+.custom_tooltip{
+    position: relative;
+    color: black;
+    border-radius: 0.35rem ; 
+    padding: 0.1rem;
+    align-self: center;    
+    background-color: rgba(54, 54, 54, 0.295);
+    opacity: 1;
+}
+
+.tooltiptext {  
+  background-color: black;
+  color: #fff;
+  min-width: 8rem;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;  
+  position: absolute;
+  z-index: 1;  
+  visibility: hidden;
+}
+
+.custom_tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+
+  label {
+    transition: 0.3s;
+    font-size: 1rem;
+    visibility: hidden;
+    transform: translateY(-50px);      
+  }
+
+  .info_tooltip{
+    font-size: 1.35rem !important;
+    font-weight: 600;
+    text-align: center; 
+    transition: 0.3s;    
+  }
+
+  .info_tooltip:hover {
+      background: rgb(78, 78, 78);
+      color: white;
+  }
+
+input{
+    padding: 0.65rem;
+    border-radius: 0.35rem;
+    outline: none;
+    background-color: rgba(189, 106, 189, 0.521);
+    border: none;
+    border: 3px solid rgb(21, 82, 214);
+    margin: 1rem 0;
+    color: white;
+    font-size: 1.3rem;
+    transition: 0.3s;
+    width: 100%;
+}
+
+input:focus {
+    background-color: rgba(189, 106, 189, 0.856);
+}
+
+input::placeholder{
+    color: white;
+}
+
+button{
+    border: none;
+    outline: none;
+    box-shadow: none;
+    padding: 0.65rem;
+    border-radius: 0.35rem;
+    font-size: 1.45rem;
+    width: 100%;
+    box-shadow: 2px 4px 5px violet;
+    border: 1px solid violet;
+    font-weight: 600;
+    color: white;
+    background-color:rgba(87, 13, 172, 0.308);
+    transition: 0.3s;
+}
+
+button:hover {
+    box-shadow: 3px 6px 5px violet;
+    outline: none;
+}
+
+button:active{
+    font-size: 1.40rem;
+    padding: 0.40rem;
+    width: 95%;
+    outline: none;
+}
+
+button:focus {
+    outline: none;
+    border: 2px solid rgb(40, 10, 54);
+}
+
+.form_field{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.title {
+    color: rgb(228, 62, 219);
+  
+    align-self: center;
+}
+.num_points_in{
+    display: inline-block;
+}
+
+.num_points_out{
+    display: inline-block;
+}
+
+.sum{
+    align-self: center;
+}
+
+.result_btn{
+   position: absolute;
+   width: 100%;
+    top: 103%;  
+}
+
+.successPoint{
+    position: absolute; 
+    visibility: hidden;         
+    height: 10px;    
+    width: 10px;
+    background-color: rgb(20, 202, 35);
+    border-radius: 50%;      
+    transition: 1.0s ease-in;
+    border: 1px solid black;    
+}
+
+.formula_item{
+    display: inline-block;
+    width: fit-content;
+}
+
+.dangerPoint {
+    position: absolute; 
+    visibility: hidden;
+    transition: 1.0s ease-in;
+    height: 10px;    
+    width: 10px;
+    background-color: rgba(247, 10, 10, 0.925);
+    border-radius: 50%;    
+    border: 1px solid black;
+}
+
+.all_final_points{
+    border-top: 2px solid white;
+    width: fit-content;
+}
+
+.final_points{
+    display: block;    
+}
+
+.y_axe_top{
+    position: absolute;
+    top: 0%; 
+    left: 2%;   
+    font-size: 2rem;
+    color: black;
+    font-weight: 600;
+}
+
+.x_axe_left{
+    position: absolute;    
+    right: 2%;   
+    bottom: 0; 
+    font-size: 2rem;
+    color: black;
+    font-weight: 600;
+}
+
+.ending_Axe{
+    position: absolute;
+    top: 0;   
+    right: 2%; 
+    font-size: 2rem;
+    color: black;
+    font-weight: 600;
+}
+
+.result_box{
+    text-align: center;
+}
+
+.starting_axe{
+    position: absolute;
+    bottom: 0;   
+    left: 2%; 
+    font-size: 2rem;
+    color: black;
+    font-weight: 600;
+}
+
+.equals{
+    margin: auto 0;
+}
+
+.final_formula{
+    transition: 0.3s ease-in;
+    visibility: hidden;
+    transform: translateY(40px);
+}
+
+.final_showed_formula{
+    transition: 0.3s ease-in;
+    visibility: hidden;
+    transform: translateY(40px);
+}
+
+.info_text{
+    color: black;
+    width: fit-content;
+    font-size: 0.6rem;
+    position: absolute;
+    top: 0;    
+}
+
+.info_on_hover{
+    width: fit-content;
+    background: grey;
+    color: white;
+    border: 0.35rem;
+    align-self: center;
+}
+    

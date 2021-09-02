@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container-fluid row main_content">
+        <div  class="body_cont info_sect  col-xl-3 col-lg-5 col-md-12 col-sm-12 col-xm-12">
+            
+                <p class="title">π test</p>
+                <p>Let X has uniform distribution 
+                    <span class="custom_tooltip">R(0,1)
+                        <span class="tooltiptext">By this it means that X generates random number between 0 and 1</span>
+                    </span> , by this value we want to calculate approximate value of π.
+                    Effective way is to generate random points across unit square. Every generated point will have this pattern= (x,y) which actually is (X~R(0,1), X~R(0,1))
+                    How many points you want to generate in the square?
+                </p>
+                <div class="points">
+                    <div class="points_container in_container">
+                        <div class="in_points init_in_points points_container_item"></div>
+                        <p class="points_container_item in_points_info">Points in the circle</p>
+                    </div>
+                    <div class="points_container out_container">
+                        <div class="out_points init_out_points points_container_item"></div>
+                        <p class="points_container_item out_points_info">Points out the circle</p>
+                    </div>
+                </div>
+                <div class="form_field">
+                    <input type="number" id="inputik" placeholder="Number of random points">
+                    <label for="inputik" class="text-danger ">Enter number greater then 0!</label>
+                    <button onclick="submitTest()">Start test</button>
+                </div>
+            
+        </div>
+        <div class="body_cont square_sect offset-xl-2 col-xl-3 offset-lg-1 col-lg-6  col-md-12 col-sm-12 col-xm-12">
+            
+                <div id="square" class="square">  
+                    <p class="y_axe_top cords">[0,0]</p> 
+                    <p class="starting_axe cords">[0,1]</p>                
+                    <p class="x_axe_left cords">[1,1]</p> 
+                    <p class="ending_Axe cords">[1,0]</p>         
+                    <button onclick="showResult()" class="result_btn">Show result</button>               
+                
+                    
+               
+               
+                </div>
+                <div class="custom_tooltip info_tooltip">Info
+                    <div class="tooltiptext  tooltiptext_2">
+                        <li>Points which distance from [0,0] is less then 1 are green coloured</li>
+                        <li>Red coloured are oppoiste ones</li>
+                        <li>The more points you generate the more the green area of points looks like a quarter of a unit circle</li>
+                        <li> Area of quarter unit circle is: \[  { π 1^2\over4}\]</li>
+                        <li>Area of unit square is: \[  { 1 }\] </li>
+                        <li>(Area of quarter circle/Area of unit square)*4 is:  π</li>
+                    </div>
+                </div>
+               
+            
+            
+                
+            
+        </div>
+        <div class="body_cont result_cont offset-xl-2 col-xl-2 offset-lg-12 col-lg-12 col-md-12 col-sm-12 col-xm-12 ">
+            <p class="title mb-5">Results!</p>
+            <div class="points">
+                <div class="points_container in_container">
+                    <div class="in_points points_container_item num_points_in"></div>
+                    <p class="num num_points_in counter_in ml-1">0</p>                   
+                    
+                </div>
+                <div class="points_container out_container">
+                    <div class="out_points points_container_item num_points_out"></div>
+                    <p class="num num_points_out counter_out ml-1">0</p>                   
+                </div>
+                
+            </div>
+            <p class="mt-5 sum">Total random points: <span class="sum_num">0</span></p>
+            <div class="result_box">
+                <div class="final_formula">
+                    <div class="formula_item " >(</div>
+                    <div class="formula_item suc_points "></div>
+                    <div  class="formula_item "> / </div>
+                    <div class="formula_item all_points "></div>
+                    <div class="formula_item ">)</div>
+                    <div class="formula_item ">*4</div>
+                    <div class="formula_item equals">≈</div>
+                    <div class="formula_item">π</div>                
+                </div>
+                <div class="final_showed_formula">              
+                    <div class="formula_item desCis"></div>
+                    <div class="formula_item equals">≈</div>
+                    <div class="formula_item">π</div>                
+                </div>
+            </div>
+        </div>
+    </div> 
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
+    <script type="text/javascript" src="./index.js"></script>      
+</body>
+</html>
